@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <section id="daftar" class="section">
+            <h2>Pendaftaran Anggota Siswa</h2>
+            <form class="daftar-form">
+                <label for="no-identitas">No Identitas (NIK Siswa):</label>
+                <div class="input-group">
+                    <input type="text" id="no-identitas" placeholder="Masukkan NIK">
+                    <button type="button" onclick="generateNIK()">Generate NIK</button>
+                </div>
+                
+                <label for="daftar-password">Password:</label>
+                <input type="password" id="daftar-password" placeholder="Buat password">
+                
+                <label for="tempat-lahir">Tempat/Tanggal Lahir:</label>
+                <input type="text" id="tempat-lahir" placeholder="Contoh: Jakarta, 01-01-2005">
+                
+                <button type="button" onclick="daftar()">Daftar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

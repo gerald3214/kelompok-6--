@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+        <nav>
+             <h1>PERPUSTAKAAN DIGITAL</h1>
+            <ul class="container-navbar">
+                <li class="li-navbar">
+                    <a href="#" onclick="showSection('beranda'); return false;">Beranda</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="#" onclick="showSection('peminjaman'); return false;">Data Peminjaman</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="#" onclick="showSection('koleksi'); return false;">Koleksi Buku</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="#" onclick="showSection('keanggotaan'); return false;">keanggotaan</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="#" onclick="showSection('daftar'); return false;">Daftar</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Section Beranda -->
+        <section id="beranda" class="section active">
+            <h1 class="welcome-text">Selamat Datang, Pembaca!</h1>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h2>Total Buku</h2>
+                    <p class="stat-number">1.250</p>
+                </div>
+                <div class="stat-box">
+                    <h2>Buku Dipinjam</h2>
+                    <p class="stat-number">150</p>
+                </div>
+                <div class="stat-box">
+                    <h2>Buku Tersedia</h2>
+                    <p class="stat-number">1.100</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Data Peminjaman -->
+        <section id="peminjaman" class="section">
+            <h2>Data Peminjaman</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Waktu Pengambilan</th>
+                        <th>Nama Siswa</th>
+                        <th>Kelas</th>
+                        <th>Waktu Pengembalian</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023-10-01 09:00</td>
+                        <td>Ahmad Saroni</td>
+                        <td>X IPA 1</td>
+                        <td>2023-10-08 09:00</td>
+                    </tr>
+                    <tr>
+                        <td>2023-10-02 10:30</td>
+                        <td>Siti Nurhaliza</td>
+                        <td>X IPS 2</td>
+                        <td>2023-10-09 10:30</td>
+                    </tr>
+                    <!-- Tambahkan data dummy lebih lanjut jika perlu -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section Koleksi Buku -->
+ 
+<section id="koleksi" class="section">
+    <h2>Koleksi Buku</h2>
+
+                    <div class="koleksi-grid">
+                <div class="koleksi-item">
+                    <h3>Buku Bahasa Indonesia</h3>
+                    <p>50 judul tersedia, termasuk sastra dan puisi.</p>
+                </div>
+                <div class="koleksi-item">
+                    <h3>Buku Bahasa Sunda</h3>
+                    <p>30 judul, fokus pada budaya Sunda.</p>
+                </div>
+                <div class="koleksi-item">
+                    <h3>Matematika</h3>
+                    <p>100 judul, dari dasar hingga lanjutan.</p>
+                </div>
+                <div class="koleksi-item">
+                    <h3>Buku Fisika</h3>
+                    <p>70 judul, termasuk eksperimen dan teori.</p>
+                </div>
+                <div class="koleksi-item">
+                    <h3>Buku B.Inggris</h3>
+                    <p>30 judul, fokus pada ilmu pengetahuan bahasa inggris.</p>
+                </div>
+                <div class="koleksi-item">
+                    <h3>Buku IPS</h3>
+                    <p>30 judul, fokus pada ilmu pengetahuan sosial.</p>
+                </div>
+                <div class="koleksi-item">
+                    <h3>Buku Informatika</h3>
+                    <p>25 judul, termasuk praktek dan teori.</p>
+                </div>
+                <div class="koleksi-item">
+                    <h3>Buku Sejarah</h3>
+                    <p>30 judul, fokus pada ilmu pengetahuan sejarah.</p>
+                </div>
+                <div class="koleksi-item">
+                    <h3>Komic onepiece</h3>
+                    <p>2.000 judul, dari dasar hingga lanjutan.</p>
+                </div>
+                <div class="koleksi-item">
+                    <h3>Buku PAI</h3>
+                    <p>30 judul, fokus pada budaya Islam.</p>
+                </div>
+                <div class="koleksi-item">
+                    <h3>Novel Dilan 1995</h3>
+                    <p>200 judul, dari dasar hingga lanjutan</p>
+                </div>
+                <div class="koleksi-item">
+                    <h3>Cerita Sang Kancil</h3>
+                    <p>15 judul, fokus pada cerita rakyat</p>
+            </div>
+        </section>
+
+        <!-- Section Keanggotaan -->
+        <section id="keanggotaan" class="section">
+            <h2>Keanggotaan</h2>
+            <form class="login-form">
+                <label for="nomor-anggota">Nomor Anggota:</label>
+                <input type="text" id="nomor-anggota" placeholder="Masukkan nomor anggota">
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Masukkan password">
+                
+                <button type="button" onclick="login()">Login</button>
+                <button type="button" onclick="alert('Fitur lupa password belum diimplementasikan.')">Lupa Password</button>
+                <button type="button" onclick="showSection('daftar')">Daftar</button>
+            </form>
+        </section>
+
+        <!-- Section Daftar -->
+        <section id="daftar" class="section">
+            <h2>Pendaftaran Anggota Siswa</h2>
+            <form class="daftar-form">
+                <label for="no-identitas">No Identitas (NIK Siswa):</label>
+                <div class="input-group">
+                    <input type="text" id="no-identitas" placeholder="Masukkan NIK">
+                    <button type="button" onclick="generateNIK()">Generate NIK</button>
+                </div>
+                
+                <label for="daftar-password">Password:</label>
+                <input type="password" id="daftar-password" placeholder="Buat password">
+                
+                <label for="tempat-lahir">Tempat/Tanggal Lahir:</label>
+                <input type="text" id="tempat-lahir" placeholder="Contoh: Jakarta, 01-01-2005">
+                
+                <button type="button" onclick="daftar()">Daftar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
